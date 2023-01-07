@@ -48,3 +48,61 @@ const details = {
 
 //    the difference btn call() method and apply() method is that
 // in apply() method the arguments are taken as an Array
+
+
+//Factory function  
+
+function createCircle (radius){
+    return {
+       radius,
+       draw: function (){
+        console.log('draw');
+       }
+    };
+}
+const circle = createCircle(1);
+
+//using constructor functions
+
+ function Circle(radius){
+    this.radius = radius;
+    this.draw = function(){
+        console.log('draw');
+    }
+ }
+ const another = new Circle(1);
+
+ console.log(another);
+
+//  these were the two ways in which you can make object in an effective way
+
+
+function Myname(firstname,lastName){
+    this.firstname = firstname;
+    this.lastName = lastName;
+    this.display = function (){
+        return 'my names are '+ this.firstname + this.lastName;
+    }
+}
+const anotherName = new Myname('Ineza ','Lucky Believe');
+
+console.log(anotherName.display());
+
+//the effective way that i've chosen among the two is using constructor function method in making the object
+
+
+//let's use the factory function in making the object 
+
+function myname (name,age) {
+    return {
+        name,
+        age,
+        draw : function (){
+            return "my names are "+this.name +",I'm "+this.age;
+        }
+    }    
+}
+const myname2 = myname('lucky Believe',17);
+
+;
+console.log(myname2.draw());
