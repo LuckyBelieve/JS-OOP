@@ -43,7 +43,32 @@ function myLongSentense (mySentense){
 
 
  //setting properties of the object that is already declared
- 
+
 //  newName.firstname = 'Neza ';
 newName['first-Name'] = 'Neza'
   console.log(newName['first-Name']);
+
+  function newTime (name,age) {
+    return {
+        name,
+        age,
+        display: function () {
+            'my names are '+ this.name +' and I\'m '+this.age;
+        }
+    }
+  }
+  const newMe = newTime ('Ineza Lucky Believe',18);
+
+  let myNm = newMe.display();
+  
+
+   let paragraph = document.querySelector('p');
+//    console.log(paragraph);
+   let button = document.querySelector('.myName');
+//    console.log(button);
+
+function revealMe () {
+    paragraph.innerText = newMe.display();
+}
+// console.log(paragraph.innerText);
+ button.addEventListener('click',revealMe);
