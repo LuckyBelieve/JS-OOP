@@ -29,3 +29,21 @@ function myLongSentense (mySentense){
 
 
  //yes we did it !!!!
+
+ function Myname (name,age){
+    this.name = name,
+    this.age = age,
+    this.display = function(){
+        return "my names are "+this.name+" and I'm "+this.age;
+
+    }
+ }
+ const newName = new Myname('Ineza Lucky Believe',17);
+ console.log(newName.display());
+
+
+ //setting properties of the object that is already declared
+ 
+//  newName.firstname = 'Neza ';
+newName['first-Name'] = 'Neza'
+  console.log(newName['first-Name']);
