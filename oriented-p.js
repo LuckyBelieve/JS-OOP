@@ -118,7 +118,7 @@ function Getters (name,intrests) {
     }
 
     this.display = function() {
-        "my mames are "+this.name+" and my intrests are "+this.intrests[0]+" and "+this.intrests[1]; 
+        return "my mames are "+this.name+" and my intrests are "+this.intrests[0]+" and "+this.intrests[1]; 
     }
     
     Object.defineProperty(this,'age',{
@@ -137,9 +137,10 @@ function Getters (name,intrests) {
   
  
 
-const realTime = new Getters('Ineza Lucky Believe',['coding;playing video games'])
+const realTime = new Getters('Ineza Lucky Believe',['coding','playing video games'])
 
 // realTime.age = 24;
 console.log(realTime);
+console.log(realTime.display());
 
 // console.log(realTime.age);
