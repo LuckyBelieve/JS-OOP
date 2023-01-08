@@ -53,7 +53,7 @@ newName['first-Name'] = 'Neza'
         name,
         age,
         display: function () {
-           return 'my names are '+ this.name +' and I\'m '+this.age;
+           return 'my names are '+ this.name +' and I\'m '+this.age+ ' years old.';
         }
     }
   }
@@ -94,3 +94,27 @@ const newSetter = new Setters('Ineza Lucky Blieve',['coding','playing video game
 console.log(newSetter);
 
 console.log(newSetter.display());
+
+//let's us proceed with prototypes
+
+Setters.prototype.Money = 2000;
+
+console.log(newSetter.Money);
+
+//as we are seeing this codes above prototypes allows us to set other properties to the parent object 
+//and those properties are then set to other object created from the parent object 
+
+//let's try to add a method using prototype
+
+Setters.prototype.hello = function(){
+    return 'Hello '+this.name;
+    // if(me<18){
+    //     throw new error('you\'re still young');
+    // }
+    // else{
+    //     throw new error('vote');
+    // }
+}
+newSetter.hello();
+
+console.log(newSetter.hello());
