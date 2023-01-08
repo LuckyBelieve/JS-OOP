@@ -135,8 +135,6 @@ function Getters (name,intrests) {
    })
 }
   
- 
-
 const realTime = new Getters('Ineza Lucky Believe',['coding','playing video games'])
 
 // realTime.age = 24;
