@@ -53,13 +53,12 @@ newName['first-Name'] = 'Neza'
         name,
         age,
         display: function () {
-            'my names are '+ this.name +' and I\'m '+this.age;
+           return 'my names are '+ this.name +' and I\'m '+this.age;
         }
     }
   }
   const newMe = newTime ('Ineza Lucky Believe',18);
 
-  let myNm = newMe.display(); 
 
    let paragraph = document.querySelector('p');
 //    console.log(paragraph);
@@ -67,10 +66,31 @@ newName['first-Name'] = 'Neza'
 //    console.log(button);
 
 function revealMe () {
-    let Hello = newMe.display()
-
-    paragraph.innerText = 'Ineza Lucky Believe and I\'m 18 years old ';
+    paragraph.innerText = newMe.display();
 }
 // console.log(paragraph.innerText);
 
  button.addEventListener('click',revealMe);
+
+ function Setters (name,hobbies) {
+    this.name = name;
+    this.hobbies = hobbies;
+    let age = 23;
+
+    this.display = function (){
+       return 'my names are '+this.name+' and my hobbies are '+this.hobbies[0]+' and '+this.hobbies[1];
+    }
+
+    Object.defineProperty(this,'age',{
+        get:function (){
+            return age;
+        },
+        set:function(value){
+            age = value;
+        }
+    })
+ }
+const newSetter = new Setters('Ineza Lucky Blieve',['coding','playing video games']);
+console.log(newSetter);
+
+console.log(newSetter.display());
