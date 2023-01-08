@@ -106,3 +106,40 @@ const myname2 = myname('lucky Believe',17);
 
 ;
 console.log(myname2.draw());
+
+function Getters (name,intrests) {
+    this.name = name;
+    this.intrests = intrests;
+     
+    let age = 18
+
+    this.getAge = function(){
+        return age;
+    }
+
+    this.display = function() {
+        "my mames are "+this.name+" and my intrests are "+this.intrests[0]+" and "+this.intrests[1]; 
+    }
+    
+    Object.defineProperty(this,'age',{
+    get: function(){
+        return age;
+    },
+    set: function (value){
+        // if(value !==18){
+        //     throw new error('invalid age.');
+        // }
+        age = value;
+    }
+    
+   })
+}
+  
+ 
+
+const realTime = new Getters('Ineza Lucky Believe',['coding;playing video games'])
+
+// realTime.age = 24;
+console.log(realTime);
+
+// console.log(realTime.age);
