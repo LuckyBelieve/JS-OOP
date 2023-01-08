@@ -59,8 +59,7 @@ newName['first-Name'] = 'Neza'
   }
   const newMe = newTime ('Ineza Lucky Believe',18);
 
-  let myNm = newMe.display();
-  
+  let myNm = newMe.display(); 
 
    let paragraph = document.querySelector('p');
 //    console.log(paragraph);
@@ -68,7 +67,10 @@ newName['first-Name'] = 'Neza'
 //    console.log(button);
 
 function revealMe () {
-    paragraph.innerText = newMe.display();
+    let Hello = newMe.display()
+
+    paragraph.innerText = 'Ineza Lucky Believe and I\'m 18 years old ';
 }
 // console.log(paragraph.innerText);
+
  button.addEventListener('click',revealMe);
