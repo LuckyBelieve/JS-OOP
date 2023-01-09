@@ -15,7 +15,7 @@ const sister = {
     Age:13,
     School: 'FAWE Girls School',
 }
-// console.log(believe.display.bind(sister));
+console.log(believe.display.call(sister));
 
 
 // the use of call when we have the arguments in the function
@@ -142,3 +142,36 @@ console.log(realTime);
 console.log(realTime.display());
 
 // console.log(realTime.age);
+
+function Morning (names,hobbies){
+    this.names = names ;
+    this.hobbies = hobbies;
+    let age  = 30 +'years old';
+
+    this.display = function(){
+        return "my names are "+this.names+". my hobbies are "+hobbies;
+    }
+    Object.defineProperty(this,'age', {
+        get: function(){
+            return age;
+        },
+        set:function(value){
+            age = value;
+        }
+    })
+
+}
+ const MorningStar = new Morning('ineza Lucky Believe ','coding');
+
+ console.log(MorningStar);
+
+//  factory function
+ function morning (names,hobbies){
+    return {
+        names,
+        hobbies,
+        display: function(){
+            return "my names are "+names
+        }
+    }
+ }
