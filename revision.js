@@ -118,3 +118,23 @@ Setters.prototype.hello = function(){
 newSetter.hello();
 
 console.log(newSetter.hello());
+
+ const Lucky = {
+    names: 'INEZA Lucky Believe',
+    age:18,
+    hobbies:'coding',
+    display: function(country,city){
+        return 'my names are '+this.names+' I\'m '+this.age+' and my hobbies are '+this.hobbies+' and my home country is '+country+' and my city is '+city;
+    }
+ }
+ console.log(Lucky.display('Rwanda','Huye'));
+
+ const Mary = {
+    names:'ABEZA Mary Repy Happiness',
+    age:13,
+    hobbies:'studying',
+ }
+ let helloWorld = Lucky.display.bind(Mary);
+
+ console.log(helloWorld);
+
