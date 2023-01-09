@@ -37,6 +37,7 @@ function myLongSentense (mySentense){
         return "my names are "+this.name+" and I'm "+this.age;
 
     }
+    
  }
  const newName = new Myname('Ineza Lucky Believe',17);
  console.log(newName.display());
