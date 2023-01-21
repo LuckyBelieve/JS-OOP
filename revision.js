@@ -135,7 +135,7 @@ console.log(newSetter.hello());
     age:13,
     hobbies:'studying',
  }
- let helloWorld = Lucky.display.apply(Mary,'Rwanda','Huye');
+ let helloWorld = Lucky.display.apply(Mary,'Rwandan','Huye');
 
  console.log(helloWorld);
 
