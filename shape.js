@@ -9,7 +9,7 @@ function Shape(){
 }
 const newArea = new Shape()
 newArea.name = 'Rectangle';
-newArea.width = 10;
+newArea.width = 12;
 newArea.height = 5;
 
 newArea.calculateArea();
