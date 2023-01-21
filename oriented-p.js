@@ -175,3 +175,19 @@ function Morning (names,hobbies){
         }
     }
  }
+
+ //esma in javascript
+
+ class vehicle{
+    constructor(first,last,model,wheels){
+        this.name={
+            first,
+            last
+        }
+        this.model=model;
+        this.wheels=wheels;
+        this.display= function(){
+            
+        }
+    }
+ }
